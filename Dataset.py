@@ -7,6 +7,7 @@ joint_locations=[[-1,-1],[-1,-0.75],[-1,-0.5],[-1,-0.25],[-1,0],[-1,0.25],[-1,0.
 list_combinations=list()
 list_combinations=list(combinations(joint_locations,3))
 totalcombinations=len(list_combinations)
+f=open('Dataset.txt','w')
 #placeholders
 joint1=[0,0]
 joint2=[0,0]
@@ -83,7 +84,8 @@ for i in range(totalcombinations):
       plugx=line2end[0]
       plugy=random.uniform(line2start[1]+0.0001,line2end[1]-0.0001)
       joint7=[plugx,plugy]
-    print("("+str(joint1[0])+","+str(joint1[1])+"),"+" ("+str(joint2[0])+","+str(joint2[1])+"),"+"("+str(joint3[0])+","+str(joint3[1])+"),"+"("+str(joint4[0])+","+str(joint4[1])+"),"+"("+str(joint5[0])+","+str(joint5[1])+"),"+"("+str(joint6[0])+","+str(joint6[1])+"),"+"("+str(joint7[0])+","+str(joint7[1])+")")
+    print("("+str(joint1[0])+","+str(joint1[1])+"),"+" ("+str(joint2[0])+","+str(joint2[1])+"),"+"("+str(joint3[0])+","+str(joint3[1])+"),"+"("+str(joint4[0])+","+str(joint4[1])+"),"+"("+str(joint5[0])+","+str(joint5[1])+"),"+"("+str(joint6[0])+","+str(joint6[1])+"),"+"("+str(joint7[0])+","+str(joint7[1])+")\n"     )
+    f.write("("+str(joint1[0])+","+str(joint1[1])+"),"+" ("+str(joint2[0])+","+str(joint2[1])+"),"+"("+str(joint3[0])+","+str(joint3[1])+"),"+"("+str(joint4[0])+","+str(joint4[1])+"),"+"("+str(joint5[0])+","+str(joint5[1])+"),"+"("+str(joint6[0])+","+str(joint6[1])+"),"+"("+str(joint7[0])+","+str(joint7[1])+")\n"   )
 print("This was the number of invalid cases")
 print(count)
     
